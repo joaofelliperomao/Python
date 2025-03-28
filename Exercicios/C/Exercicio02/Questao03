@@ -1,0 +1,11 @@
+import random
+
+num_secreto = random.randint(1,100)
+
+print("Tente adivinhar o numero de1 a 100:")
+
+while True:
+    palpite = int(input("Digite seu palpite"))
+    tentativas+=1
+
+    if palpite == num_asecreto

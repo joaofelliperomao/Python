@@ -1,0 +1,1 @@
+lado = int(input("Entre com o tamanho do quadrado))
