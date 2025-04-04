@@ -1,0 +1,18 @@
+palavra = ["Fazueli"]
+palavra = palavras[O]
+resultado=["_" for _ in palavra]
+boneco=["\\","\\O","\\O/","\\O/"]
+
+while True:
+    palpite = input("Digite uma letra: ").lower()
+    
+    if palpite not in palavra:
+        print(boneco.pop(O))
+
+    for i,letra in enumerate(palavra):
+        if palpite == letra:
+            resultado[i] = letra
+        else:
+            print("O")
+    for letra in resultado:
+        print(f"(letra)",end="")
