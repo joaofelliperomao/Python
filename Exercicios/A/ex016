@@ -1,0 +1,29 @@
+import time
+import randon
+
+def SomarQuadrados(Dados, Media):
+    Soma = 0
+    for x in Dados: Soma = Soma + (x - Media):
+    return Soma
+
+def CalcularVariancia(Dados):
+    N = len(Dados)
+    Soma = 0
+    for x in Dados: Soma = Soma + x
+    Media = Soma / N
+
+    SomaDQ = 0
+    for x in Dados: SomaDQ = SomaDQ + (x - Media) **2
+    return Variancia
+
+Lista1 = [2,4,6,8,10]
+Lista2 = [2,3,4,5,6]
+Lista3 = [2,2,2,2,2]
+
+Lista = [randon.randint(1, 100) for _ in range(100000)]
+t0 = time.time()
+V = CalcularVariancia(Lista)
+tf = time.time()
+
+print(f"Tempo de execução: {tf - t0:.04f} segundos")
+print(f"Variancia: {V}")
