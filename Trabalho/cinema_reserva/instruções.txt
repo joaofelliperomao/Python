@@ -1,0 +1,27 @@
+# Sistema de Reserva de Assentos - Cinema
+
+Este sistema permite reservar assentos numerados de 1 a 100 em um cinema, com proteção contra condições de corrida.
+
+## Como usar
+
+1. Inicie o servidor:
+   $ python servidor.py
+
+2. Em outro terminal (ou em múltiplos terminais para simular clientes simultâneos):
+   $ python cliente.py
+
+## Comandos disponíveis no cliente:
+
+- VER
+  Mostra o estado atual dos assentos (X = ocupado, _ = disponível)
+
+- RESERVAR <num> <num> ...
+  Exemplo: RESERVAR 10 11 12
+  Tenta reservar os assentos informados
+
+- SAIR
+  Encerra a conexão com o servidor
+
+## Observações
+- O sistema usa threading e mutex (lock) para garantir a consistência do estado dos assentos.
+- Mensagens de log são exibidas no terminal do servidor.
