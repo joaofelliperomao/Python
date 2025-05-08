@@ -1,0 +1,5 @@
+import psutil
+
+for proc in psutil.process_iter(['name', 'cpu_percent']):
+    if proc.info['cpu_percent'] > 50:
+        print(f"{proc.info['name']} - {proc.pid}")

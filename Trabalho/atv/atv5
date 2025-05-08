@@ -1,0 +1,9 @@
+def transformar(lista):
+   resultado = []
+   for i in range(len(lista)):
+      valor = lista[i] ** 2 + i
+      resultado.append(valor)
+      return resultado
+
+entrada = list(range(1_000_000))
+saida = transformar(entrada)  

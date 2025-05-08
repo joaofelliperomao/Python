@@ -1,0 +1,27 @@
+import time
+
+def transformar(lista):
+    nova_lista = []
+    for i, valor in enumerate(lista):
+        novo_valor = valor ** 2 + i
+        nova_lista.append(novo_valor)
+return nova_lista
+
+def pipeline(dados):
+    inicio = time.time()
+
+    print("lendo dados...")
+    time.sleep(3)
+
+    print("transformando dados...")
+    resultado = transformar(dados)
+
+    print("escrevendo dados...")
+    time.sleep(2)
+
+    fim = time.time()
+    print(f"tempo total: {fim - inicio:.2f} segundos")
+    return resultado
+
+dados = list(range(5_000_000))
+pipeline(dados)
